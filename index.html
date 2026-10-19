@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Lunatrip</title>
+</head>
+<body>
+    <h1>Formulario de Reserva Lunatrip</h1>
+    <form action="/procesar.php" method="post">
+        <fieldset>
+            <legend>1. Datos del viajero/a</legend>
+            <p>
+                <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required autofocus>
+        </p>
+        <p>
+            <label for="correo">Email:</label>
+        <input type="email" id="correo" name="correo" required>
+        </p>
+        <p><label for="telefono">Teléfono:</label>
+        <input type="tel" name="telefono" id="telefono" required pattern="[0-9]{9}" title="9 dígitos">
+        </p>
+        <p>
+        <label for="nacimiento">Fecha de nacimiento:</label>
+        <input type="date" name="nacimiento" id="nacimiento" required max="2008-10-13">
+        </p>
+        <p>
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" id="contraseña" name="contraseña" minlength="8">
+        </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>2. Datos del viaje</legend>
+            <p>
+        <label for="despegue">Fecha de despegue:</label>
+        <input type="date" name="despegue" id="despegue" required min="2026-10-14">
+        </p>
+        <p>
+        <label for="pasajeros">Número de pasajeros:</label>
+        <input type="number" name="pasajeros" id="pasajeros" min="1" max="4">
+        </p>
+        <p>
+        <label for="clase">Clase de cabina:</label>
+        <select id="clase" name="clase">
+            <option value="">-- Elige --</option>
+            <option value="economica">Económica</option>
+            <option value="business">Business</option>
+            <option value="suiteConVistas">Suite con vistas</option>
+        </select>
+        </p>
+        <p>
+            <label>Tipo de traje espacial:</label><br>
+            <input type="radio" id="clasico" name="traje" value="clasico">
+            <label for="clasico">Clásico</label>
+            <input type="radio" id="ligero" name="traje" value="ligero">
+            <label for="ligero">Ligero</label>
+            <input type="radio" id="premium" name="traje" value="premium">
+            <label for="premium">Premium</label>
+        </p>
+        <p>
+        <label for="paseo">Destino del paseo lunar:</label>
+        <input type="text" id="paseo" name="paseo" list="destinos">
+        <datalist id="destinos">
+        <option value="Mar de la tranquilidad"></option>
+        <option value="Cráter lunar central"></option>
+        </datalist>
+        </p>
+        </fieldset>
+        <fieldset>
+            <legend>3. Extras y preferencias</legend>
+            <p>
+        <label>Servicios extra:</label><br>
+        <input type="checkbox" name="servicios" id="comidaGourmet" value="comidaGourmet">
+        <label for="comidaGourmet">Comida gourmet</label>
+        <input type="checkbox" name="servicios" id="foto" value="foto">
+        <label for="foto">Foto con la Tierra de fondo</label>
+        <input type="checkbox" name="servicios" id="seguro" value="seguro">
+        <label for="seguro">Seguro de meteoritos</label>
+        <input type="checkbox" name="servicios" id="souvenirs" value="souvenirs">
+        <label for="souvenirs">Souvenirs</label>
+            </p>
+            <p>
+        <label for="miedo">Miedo a las alturas (0 a 10):</label>
+        <input type="range" id="miedo" name="miedo" min="0" max="10" value="5">
+        </p>
+        <p>
+        <label for="comentarios">Comentarios:</label><br>
+        <textarea name="comentarios" id="comentarios" rows="4"
+        cols="40" placeholder="Alergias, peticiones, etc."></textarea>
+        </p>
+        <p>
+        <input type="checkbox" name="condiciones" id="acepto" value="acepto" required>
+        <label for="acepto">Acepto las condiciones</label>
+        </p>
+        </fieldset>
+        <button type="submit">Reservar mi plaza</button>
+        <button type="reset">Empezar de nuevo</button>
+
+    </form>
+</body>
+</html>
