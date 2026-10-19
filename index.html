@@ -51,7 +51,7 @@
         </select>
         </p>
         <p>
-            <label>Tipo de traje espacial:</label><br>
+            <label>Tipo de traje espacial:</label>
             <input type="radio" id="clasico" name="traje" value="clasico">
             <label for="clasico">Clásico</label>
             <input type="radio" id="ligero" name="traje" value="ligero">
@@ -71,7 +71,8 @@
         <fieldset>
             <legend>3. Extras y preferencias</legend>
             <p>
-        <label>Servicios extra:</label><br>
+        <label>Servicios extra:</label>
+                <p>
         <input type="checkbox" name="servicios" id="comidaGourmet" value="comidaGourmet">
         <label for="comidaGourmet">Comida gourmet</label>
         <input type="checkbox" name="servicios" id="foto" value="foto">
@@ -80,15 +81,18 @@
         <label for="seguro">Seguro de meteoritos</label>
         <input type="checkbox" name="servicios" id="souvenirs" value="souvenirs">
         <label for="souvenirs">Souvenirs</label>
+                </p>
             </p>
             <p>
         <label for="miedo">Miedo a las alturas (0 a 10):</label>
         <input type="range" id="miedo" name="miedo" min="0" max="10" value="5">
         </p>
+            <p>
+        <label for="comentarios">Comentarios:</label>
         <p>
-        <label for="comentarios">Comentarios:</label><br>
         <textarea name="comentarios" id="comentarios" rows="4"
         cols="40" placeholder="Alergias, peticiones, etc."></textarea>
+            </p>
         </p>
         <p>
         <input type="checkbox" name="condiciones" id="acepto" value="acepto" required>
