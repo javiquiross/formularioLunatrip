@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Nasalization';
+  src: url('fonts/Nasalization Rg.otf') format('opentype');
+}
+
+h1{
+    color: rgb(226, 147, 1);
+}
+
+* {
+    color: rgb(255, 166, 1);
+    font-family: nasalization;
+    font-weight: bold;
+}
+
+
+
+body {
+    background-image: url(https://josevicentediaz.com/wp-content/uploads/2024/08/estrellaazul.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button {
+    cursor: pointer;
+    margin: 10px;
+    box-shadow: 4px 8px 10px 2px rgb(255, 166, 1);
+}
+
+fieldset{
+    border: 2px solid orange;
+    border-radius: 20px;
+}
